@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contrato de Compra e Venda de Veículo</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14pt;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+    .download-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16pt;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<main id="contrato">
+CONTRATO PARTICULAR DE COMPRA E VENDA DE AUTOMÓVEL
+
+1. CLÁUSULA PRIMEIRA - DAS PARTES:
+1.1 VENDEDOR: ________ , ________ , ________ , portador da cédula de identidade R.G. nº ________ e CPF nº ________ , residente à ________ , ________ .
+1.2 COMPRADOR: ________ , ________ , ________ , portador da cédula de identidade R.G. nº ________ e CPF nº ________ , residente à ________ , ________ .
+1.3 FIADORES: ________ , portador da cédula de identidade R.G. nº ________ e CPF nº ________ , residente à ________ , e sua esposa, ________ , portadora da cédula de identidade R.G. nº ________ , e CPF nº ________ .
+
+Por este instrumento particular...
+
+2. CLÁUSULA SEGUNDA - DO OBJETO:
+2.1 VEÍCULO: ________ , marca ________ , modelo ________ , ano ________ , chassi nº ________ , cor ________ , placa ________ , categoria ________ , DUT nº ________ .
+
+[...]
+
+8.3 As partes elegem o Foro da Comarca de ________ .
+
+E por estarem certos e ajustados, assinam o presente instrumento em três vias.
+
+________ , ________
+
+VENDEDOR: __________________________  
+COMPRADOR: _________________________  
+
+TESTEMUNHAS:  
+1. __________________ , CPF nº ________  
+2. __________________ , CPF nº ________
+</main>
+
+<button class="download-btn" onclick="baixarPDF()">Baixar em PDF</button>
+
+<!-- jsPDF e html2canvas para gerar PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+  async function baixarPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('p', 'pt', 'a4');
+    const elemento = document.getElementById("contrato");
+    const canvas = await html2canvas(elemento, { scale: 2 });
+    const imgData = canvas.toDataURL("image/png");
+    const imgProps = doc.getImageProperties(imgData);
+    const pdfWidth = doc.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    doc.save("contrato-compra-venda.pdf");
+  }
+</script>
+
+</body>
+</html>
