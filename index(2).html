@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato Veicular</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            padding: 10px;
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+        }
+        .btn-download {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #00c853;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 100px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contrato Veicular</h1>
+        <a class="btn-download" href="contrato-compra.pdf" download>📥 Baixar Contrato em PDF</a>
+    </header>
+    <iframe src="contrato-compra.pdf"></iframe>
+</body>
+</html>
