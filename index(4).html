@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato Veicular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 16px;
+            padding-bottom: 80px;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004aad;
+            font-size: 22px;
+            margin-bottom: 24px;
+        }
+
+        .campo {
+            display: inline-block;
+            background-color: #f0f0f0;
+            border: 1px dashed #ccc;
+            padding: 6px 8px;
+            min-width: 100px;
+            border-radius: 4px;
+        }
+
+        .campo:focus {
+            background-color: #fff9c4;
+            outline: none;
+            border-color: #004aad;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .download {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .download a {
+            background-color: #00c853;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Contrato de Compra e Venda de Automóvel</h1>
+
+    <p><strong>VENDEDOR:</strong> <span class="campo" contenteditable="true">Nome do Vendedor</span>,
+    RG nº <span class="campo" contenteditable="true">0000000</span>, CPF nº <span class="campo" contenteditable="true">000.000.000-00</span>,
+    residente à <span class="campo" contenteditable="true">Endereço Completo</span>.</p>
+
+    <p><strong>COMPRADOR:</strong> <span class="campo" contenteditable="true">Nome do Comprador</span>,
+    RG nº <span class="campo" contenteditable="true">0000000</span>, CPF nº <span class="campo" contenteditable="true">000.000.000-00</span>,
+    residente à <span class="campo" contenteditable="true">Endereço Completo</span>.</p>
+
+    <p><strong>CLÁUSULA 1ª –</strong> O VENDEDOR é legítimo proprietário do veículo abaixo descrito e o vende ao COMPRADOR:
+    Marca: <span class="campo" contenteditable="true">Marca</span>, Modelo: <span class="campo" contenteditable="true">Modelo</span>,
+    Ano: <span class="campo" contenteditable="true">Ano</span>, Placa: <span class="campo" contenteditable="true">AAA0A00</span>, Renavam: <span class="campo" contenteditable="true">00000000000</span>.</p>
+
+    <p><strong>CLÁUSULA 2ª –</strong> O valor ajustado é de R$ <span class="campo" contenteditable="true">0.000,00</span>,
+    a ser pago em <span class="campo" contenteditable="true">número de parcelas</span> parcelas mensais de R$ <span class="campo" contenteditable="true">000,00</span>.</p>
+
+    <p><strong>CLÁUSULA 3ª –</strong> O COMPRADOR declara estar ciente e de acordo com o estado atual do veículo.</p>
+
+    <p><strong>CLÁUSULA 4ª –</strong> Este contrato é celebrado em duas vias de igual teor, para que produza seus efeitos legais.</p>
+
+    <p><strong>Data:</strong> <span class="campo" contenteditable="true">__/__/____</span></p>
+
+    <p><strong>Assinaturas:</strong></p>
+    <p>__________________________<br>Vendedor</p>
+    <p>__________________________<br>Comprador</p>
+
+    <div class="download">
+        <a href="contrato-compra.pdf" download>📥 Baixar Contrato</a>
+    </div>
+</body>
+</html>
